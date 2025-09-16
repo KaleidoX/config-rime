@@ -1,0 +1,38 @@
+patch:
+  # 开关
+  # reset: 默认状态。注释掉后，切换窗口时不会重置到默认状态。
+  # states: 方案选单显示的名称。可以注释掉，仍可以通过快捷键切换。
+  # abbrev: 默认的缩写取 states 的第一个字符，abbrev 可自定义一个字符
+  switches:
+    - name: ascii_mode
+      states: [ 中, Ａ ]
+    - name: ascii_punct  # 中英标点
+      states: [ ¥, $ ]
+    - name: traditionalization
+      states: [ 简, 繁 ]
+      reset: 0
+    - name: emoji
+      states: [ 💀, 😄 ]
+      reset: 0
+    - name: full_shape
+      states: [ 半角, 全角 ]
+      reset: 0
+    - name: search_single_char  # search.lua 的功能开关，辅码查词时是否单字优先
+      states: [正常, 单字]
+      abbrev: [词, 单]
+
+  import_tables:
+    - cn_dicts/8105     # 字表
+    # - cn_dicts/41448  # 大字表（按需启用）（启用时和 8105 同时启用并放在 8105 下面）
+    - cn_dicts/base     # 基础词库
+    # - cn_dicts/ext      # 扩展词库
+    # - cn_dicts/tencent  # 腾讯词向量（大词库，部署时间较长）
+    - cn_dicts/others   # 一些杂项
+
+    # 建议把扩展词库放到下面，有重复词条时，最上面的权重生效
+    # - mydict1           # 挂载配置目录下的 mydict1.dict.yaml 词库文件
+    # - cn_dicts/mydict2  # 挂载 cn_dicts 目录里的 mydict2.dict.yaml 词库文件
+    - cn_dicts/mhxy     # 梦幻西游
+
+  translator/spelling_hints: 0
+  translator/always_show_comments: false
