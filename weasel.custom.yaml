@@ -6,3 +6,9 @@ customization:
   rime_version: 1.13.1
 patch:
   "style/color_scheme": google
+  # 特定App默认中/英文输入
+  app_options:
+    git-bash.exe: # 聚焦搜索
+      ascii_mode: true # true默认英文,false默认中文
+    Code.exe: # 聚焦搜索
+      ascii_mode: true # true默认英文,false默认中文
