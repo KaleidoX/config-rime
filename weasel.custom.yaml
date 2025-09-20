@@ -8,7 +8,15 @@ patch:
   "style/color_scheme": google
   # 特定App默认中/英文输入
   app_options:
-    git-bash.exe: # 聚焦搜索
+    Taskmgr.exe:
       ascii_mode: true # true默认英文,false默认中文
-    Code.exe: # 聚焦搜索
+    WindowsTerminal.exe:
+      ascii_mode: true # true默认英文,false默认中文
+    bash.exe: # git/bin/bash
+      ascii_mode: true # true默认英文,false默认中文
+    git-bash.exe: # git-bash
+      ascii_mode: true # true默认英文,false默认中文
+    Code.exe: # vscode
+      ascii_mode: true # true默认英文,false默认中文
+    KeePassXC.exe: # vscode
       ascii_mode: true # true默认英文,false默认中文
