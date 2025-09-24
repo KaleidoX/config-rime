@@ -20,3 +20,5 @@ patch:
       ascii_mode: true # true默认英文,false默认中文
     KeePassXC.exe: # vscode
       ascii_mode: true # true默认英文,false默认中文
+    MuMuPlayer.exe: # vscode
+      ascii_mode: true # true默认英文,false默认中文
