@@ -3,6 +3,7 @@
 .vscode/
 dist/
 
+appimage/
 build/
 sync/
 *.userdb/
