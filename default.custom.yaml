@@ -5,10 +5,9 @@ patch:
 
   menu/page_size: 9 # 候选词个数
 
-  # ascii_toggle_key: Control_L
   switcher/hotkeys:
-    # - F4
-    - Control+F4
+    - F4
+    # - Control+F4
   # 中西文切换
   #
   # good_old_caps_lock:
@@ -26,11 +25,11 @@ patch:
   ascii_composer:
     good_old_caps_lock: true  # true | false
     switch_key:
-      Caps_Lock: clear       # commit_code | commit_text | clear
-      Shift_L: commit_code   # commit_code | commit_text | inline_ascii | clear | noop
-      Shift_R: noop          # commit_code | commit_text | inline_ascii | clear | noop
-      Control_L: noop        # commit_code | commit_text | inline_ascii | clear | noop
-      Control_R: noop        # commit_code | commit_text | inline_ascii | clear | noop
+      Caps_Lock: clear        # commit_code | commit_text | clear
+      Shift_L: commit_code    # commit_code | commit_text | inline_ascii | clear | noop
+      Shift_R: noop           # commit_code | commit_text | inline_ascii | clear | noop
+      Control_L: noop         # commit_code | commit_text | inline_ascii | clear | noop
+      Control_R: noop         # commit_code | commit_text | inline_ascii | clear | noop
 
   key_binder/bindings: # 若开启, 去掉前面#
     # 翻页
@@ -38,7 +37,7 @@ patch:
     # 翻页 - =
     - { when: has_menu, accept: minus, send: Page_Up }  # 上一页设置为 paging 时会导致直接上屏并输出减号
     - { when: has_menu, accept: equal, send: Page_Down }
-    - { when: always, accept: Control_L, toggle: ascii_mode } # 中/英文切换
+    # - { when: always, accept: Control_L, toggle: ascii_mode } # 中/英文切换
 
   translator/enable_user_dict: true
   translator/enable_encoder: true #是否开启自动造词〔仅table_translator有效〕
