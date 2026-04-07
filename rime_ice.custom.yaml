@@ -33,6 +33,7 @@ patch:
     # - mydict1           # 挂载配置目录下的 mydict1.dict.yaml 词库文件
     # - cn_dicts/mydict2  # 挂载 cn_dicts 目录里的 mydict2.dict.yaml 词库文件
     # - external_dicts/mhxy     # 梦幻西游
+    - external_dicts/rocom_mixed     # 洛克王国：世界
 
   translator/spelling_hints: 0
   translator/always_show_comments: false
