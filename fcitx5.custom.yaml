@@ -1,0 +1,19 @@
+# Fcitx5 settings (patch)
+# encoding: utf-8
+#
+# fcitx5-rime 专属配置，app_options 在此定义按程序默认的中/英文等开关。
+# 使用 patch 形式，只覆盖差异，自动继承上游默认值。
+# 程序名可通过以下命令查询当前各程序的输入上下文：
+#   gdbus call --session --dest org.fcitx.Fcitx5 --object-path /controller \
+#     --method org.fcitx.Fcitx.Controller1.DebugInfo
+# 同一程序可能以不同前端名出现（如 konsole 与 org.kde.konsole），建议都配置。
+# 注意：app_options 仅在会话创建时应用一次，需配合 fcitx5 的
+# 「共享输入状态」设为「按程序」（~/.config/fcitx5/conf/rime.conf 的 InputState=Program）才能可靠生效。
+patch:
+  app_options:
+    konsole:
+      ascii_mode: true # true 默认英文, false 默认中文
+    org.kde.konsole:
+      ascii_mode: true
+    code:
+      ascii_mode: true
